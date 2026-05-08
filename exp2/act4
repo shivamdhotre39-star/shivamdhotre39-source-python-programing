@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri May  8 15:18:43 2026
+
+@author: shivam dhotre
+"""
+
+speed=int(input("Enter Speed:"))
+
+if (speed>60):
+    print("You are overspeeding you got fine ")
+else: 
+    print("you got no fine")age=int(input("Enter age:"))
+if (age>18):
+    print("You are eligible")
+else:
+    print("You are not eligible")
