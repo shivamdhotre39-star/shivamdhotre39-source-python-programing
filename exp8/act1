@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri May  8 15:46:00 2026
+
+@author: shivam dhotre
+"""
+
+# Initial account balance
+balance = 5000
+
+try:
+    print("Your current balance is:", balance)
+
+    # Taking withdrawal amount
+    amount = int(input("Enter amount to withdraw: "))
+
+    # Check for negative or zero amount
+    if amount <= 0:
+        raise ValueError
+
+    # Check for insufficient balance
+    if amount > balance:
+        raise Exception("Insufficient Balance")
+
+    # Perform withdrawal
+    balance -= amount
+    print("Withdrawal successful!")
+    print("Remaining balance:", balance)
+
+except ValueError:
+    print("Error: Please enter a valid positive integer amount.")
+
+except Exception as e:
+    if str(e) == "Insufficient Balance":
+        print("Error:", e)
+    else:
+        print("Error: Something went wrong.")
+
+finally:
+    print("Transaction completed.")
