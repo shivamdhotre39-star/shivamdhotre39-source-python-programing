@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri May  8 15:47:23 2026
+
+@author: shivam dhotre
+"""
+
+# Sample shopping cart
+cart = ["Apple", "Banana", "Milk"]
+
+try:
+    print("Your cart items:", cart)
+
+    # User selects index
+    index = int(input("Enter product index to view/remove (0,1,2): "))
+
+    # Access product
+    product = cart[index]
+    print("Selected product:", product)
+
+    # Optionally remove product
+    choice = input("Do you want to remove this product? (yes/no): ").lower()
+    if choice == "yes":
+        cart.pop(index)
+        print("Product removed successfully.")
+
+    print("Updated cart:", cart)
+
+except IndexError:
+    print("Error: Invalid product index.")
+
+except ValueError:
+    print("Error: Please enter a valid integer index.")
+
+finally:
+    print("Shopping cart operation completed.")
